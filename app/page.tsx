@@ -261,29 +261,88 @@ mindfulness practices, and transformative learning experiences.
 
   {/* Contact */}
 <section id="contact" className="scroll-mt-20 py-20 px-6 bg-gray-50">
-  <div className="max-w-4xl mx-auto text-center">
+  <div className="max-w-6xl mx-auto">
 
-    <h2 className="text-4xl font-bold text-blue-900 mb-6">
+    <h2 className="text-4xl font-bold text-blue-900 text-center mb-6">
       Contact Us
     </h2>
 
-    <p className="text-lg text-gray-600 mb-10">
-      We'd love to hear from you.
+    <p className="text-lg text-gray-600 text-center mb-12">
+      We'd love to hear from you. Reach out for programs, workshops,
+      school partnerships, or wellbeing initiatives.
     </p>
 
-    <div className="bg-white p-8 rounded-xl shadow-lg">
+    <div className="grid md:grid-cols-2 gap-8">
 
-      <p className="text-lg mb-4">
-        📧nalam.mind@gmail.com
-      </p>
+      {/* Contact Details */}
+      <div className="bg-white p-8 rounded-xl shadow-lg">
+        <h3 className="text-2xl font-bold text-blue-900 mb-6">
+          Get In Touch
+        </h3>
 
-      <p className="text-lg mb-4">
-        📱 +91 9361565208
-      </p>
+        <p className="text-lg mb-4">
+          📧 nalam.mind@gmail.com
+        </p>
 
-      <p className="text-lg">
-        📍 Tamil Nadu, India
-      </p>
+        <p className="text-lg mb-4">
+          📱 +91 9361565208
+        </p>
+
+        <p className="text-lg">
+          📍 Tamil Nadu, India
+        </p>
+      </div>
+
+      {/* Contact Form */}
+      <form
+        action="https://formsubmit.co/nalam.mind@gmail.com"
+        method="POST"
+        className="bg-white p-8 rounded-xl shadow-lg"
+      >
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Enquiry from NalamMind AI Website"
+        />
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+          className="w-full border border-gray-300 p-3 rounded-lg mb-4"
+        />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          className="w-full border border-gray-300 p-3 rounded-lg mb-4"
+        />
+
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Phone Number"
+          className="w-full border border-gray-300 p-3 rounded-lg mb-4"
+        />
+
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows={5}
+          required
+          className="w-full border border-gray-300 p-3 rounded-lg mb-4"
+        />
+
+        <button
+          type="submit"
+          className="w-full bg-blue-900 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition"
+        >
+          Send Message
+        </button>
+      </form>
 
     </div>
   </div>
