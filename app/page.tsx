@@ -274,7 +274,7 @@ mindfulness practices, and transformative learning experiences.
     <div className="bg-white p-8 rounded-xl shadow-lg">
 
       <p className="text-lg mb-4">
-        📧 e.h.sathishkumar@gmail.com
+        📧nalam.mind@gmail.com
       </p>
 
       <p className="text-lg mb-4">
