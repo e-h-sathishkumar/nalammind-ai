@@ -51,19 +51,17 @@ return ( <main className="min-h-screen bg-white text-gray-800">
   </video>
 
   {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black/50"></div>
+  <div className="absolute inset-0 bg-black/60"></div>
 
   {/* Content */}
   <div className="relative z-10 max-w-6xl mx-auto px-6 text-center text-white">
 
-    <h1 className="text-6xl md:text-7xl font-bold mb-6">
+    <h1 className="text-5xl md:text-6xl font-bold mb-6">
       NalamMind AI
     </h1>
 
     <h2 className="text-3xl md:text-5xl font-semibold max-w-5xl mx-auto leading-tight mb-6">
-      Empowering Parents, Students, and Educators
-      <br />
-      through AI and Emotional Wellbeing
+      Empowering Minds Through AI and Emotional Wellbeing
     </h2>
 
     <p className="text-lg md:text-xl text-white/90 mb-8 max-w-4xl mx-auto">
@@ -77,7 +75,12 @@ return ( <main className="min-h-screen bg-white text-gray-800">
     >
       Explore Our Programs
     </a>
-
+<a
+  href="#contact"
+  className="ml-4 bg-green-500 hover:bg-green-600 px-8 py-4 rounded-lg font-semibold inline-block"
+>
+  Need Support?
+</a>
     <a
       href="#about"
       className="ml-4 border border-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-900 transition"
