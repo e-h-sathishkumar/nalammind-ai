@@ -259,7 +259,7 @@ mindfulness practices, and transformative learning experiences.
     </div>
   </section>
 
-  {/* Contact */}
+{/* Contact */}
 <section id="contact" className="scroll-mt-20 py-20 px-6 bg-gray-50">
   <div className="max-w-6xl mx-auto">
 
@@ -267,10 +267,20 @@ mindfulness practices, and transformative learning experiences.
       Contact Us
     </h2>
 
-    <p className="text-lg text-gray-600 text-center mb-12">
-      We'd love to hear from you. Reach out for programs, workshops,
-      school partnerships, or wellbeing initiatives.
-    </p>
+    {/* Guidance Box */}
+    <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg mb-12 max-w-4xl mx-auto">
+      <h3 className="text-2xl font-bold text-blue-900 text-center mb-3">
+        💬Need Someone to Listen you?
+      </h3>
+
+      <p className="text-gray-700 text-center">
+              Facing challenges in parenting, education, emotional wellbeing, or daily life?
+      Share your concern below and receive personalized support via Email or WhatsApp.
+        <br />
+        Submit your question below and receive personalized support via
+        <strong> Email</strong> or <strong>WhatsApp</strong>.
+      </p>
+    </div>
 
     <div className="grid md:grid-cols-2 gap-8">
 
@@ -289,84 +299,104 @@ mindfulness practices, and transformative learning experiences.
         </p>
 
         <p className="text-lg">
-          📍 Tamil Nadu, India
+          📍 Coimbatore, Tamil Nadu, India
         </p>
       </div>
+{/* Contact Form */}
+<form
+  action="https://formsubmit.co/nalam.mind@gmail.com"
+  method="POST"
+  className="bg-white p-8 rounded-xl shadow-lg"
+>
+  {/* Email Subject */}
+  <input
+    type="hidden"
+    name="_subject"
+    value="New Enquiry from NalamMind AI Website"
+  />
 
-      {/* Contact Form */}
-      <form
-        action="https://formsubmit.co/nalam.mind@gmail.com"
-        method="POST"
-        className="bg-white p-8 rounded-xl shadow-lg"
-      >
-        <input
-          type="hidden"
-          name="_subject"
-          value="New Enquiry from NalamMind AI Website"
-        />
+  {/* Redirect After Submission */}
+  <input
+    type="hidden"
+    name="_next"
+    value="https://www.nalammind.com/thank-you.html"
+  />
 
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          required
-          className="w-full border border-gray-300 p-3 rounded-lg mb-4"
-        />
+  {/* Disable Captcha (Optional) */}
+  <input
+    type="hidden"
+    name="_captcha"
+    value="false"
+  />
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          required
-          className="w-full border border-gray-300 p-3 rounded-lg mb-4"
-        />
+  <input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    required
+    className="w-full border border-gray-300 p-3 rounded-lg mb-4"
+  />
 
-        <input
-          type="tel"
-          name="phone"
-          placeholder="Phone Number"
-          className="w-full border border-gray-300 p-3 rounded-lg mb-4"
-        />
+  <input
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    required
+    className="w-full border border-gray-300 p-3 rounded-lg mb-4"
+  />
 
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          rows={5}
-          required
-          className="w-full border border-gray-300 p-3 rounded-lg mb-4"
-        />
+  <input
+    type="tel"
+    name="phone"
+    placeholder="Phone Number"
+    className="w-full border border-gray-300 p-3 rounded-lg mb-4"
+  />
 
-        <button
-          type="submit"
-          className="w-full bg-blue-900 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition"
-        >
-          Send Message
-        </button>
-      </form>
+  <textarea
+    name="message"
+    placeholder="Please describe your question or concern..."
+    rows={5}
+    required
+    className="w-full border border-gray-300 p-3 rounded-lg mb-4"
+  />
 
+  <button
+    type="submit"
+    className="w-full bg-blue-900 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition"
+  >
+    Ask Our Experts
+  </button>
+
+  <p className="text-sm text-gray-500 text-center mt-4">
+    🔒 Your information will remain confidential and will be used only to respond to your enquiry.
+  </p>
+</form>
     </div>
   </div>
 </section>
 
-  {/* CTA */}
-  <section className="bg-blue-900 text-white py-16 px-6 text-center">
-    <h2 className="text-3xl font-bold mb-4">
-      Begin Your Wellbeing Journey Today
-    </h2>
+{/* CTA */}
+<section className="bg-blue-900 text-white py-16 px-6 text-center">
+  <h2 className="text-3xl font-bold mb-4">
+    Begin Your Wellbeing Journey Today
+  </h2>
 
-    <p className="mb-6">
-     Explore our wellbeing programs for parents,
-students, educators, and schools.
-    </p>
+  <p className="mb-6">
+    Explore our wellbeing programs for parents,
+    students, educators, and schools.
+  </p>
 
-    <a
-  href="https://wa.me/919361565208"
-  target="_blank"
-  className="bg-teal-500 px-8 py-3 rounded-lg font-semibold inline-block"
->
-  Contact on WhatsApp
-</a>
-  </section>
+  <a
+    href="https://wa.me/919361565208"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-teal-500 px-8 py-3 rounded-lg font-semibold inline-block hover:bg-teal-600 transition"
+  >
+    Contact on WhatsApp
+  </a>
+</section>
+
+{/* Footer */}
 <footer className="bg-blue-950 text-white text-center py-8">
   <p className="font-semibold">
     © 2026 NalamMind AI. All Rights Reserved.
@@ -376,7 +406,9 @@ students, educators, and schools.
     Empowering Parents, Students, and Educators through AI and Emotional Wellbeing
   </p>
 </footer>
- <a
+
+{/* Floating WhatsApp Button */}
+<a
   href="https://wa.me/919361565208"
   target="_blank"
   rel="noopener noreferrer"
