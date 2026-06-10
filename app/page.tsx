@@ -38,7 +38,9 @@ return ( <main className="min-h-screen bg-white text-gray-800">
 
 {/* Hero */}
 <section className="relative h-screen flex items-center justify-center overflow-hidden">
-
+<div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+  ↓
+</div>
   {/* Background Video */}
   <video
     autoPlay
@@ -69,18 +71,23 @@ return ( <main className="min-h-screen bg-white text-gray-800">
       wellbeing, and life skills through guided programs and AI-powered support.
     </p>
 
+    <p className="text-lg text-white/90 mb-8 font-medium">
+  Supporting Parents • Students • Educators • Schools
+</p>
+
+<a
+  href="#contact"
+  className="bg-green-500 hover:bg-green-600 px-8 py-4 rounded-lg font-semibold inline-block"
+>
+  Need Support?
+</a>
+
     <a
       href="#program"
       className="bg-teal-500 hover:bg-teal-600 px-8 py-4 rounded-lg font-semibold inline-block"
     >
       Explore Our Programs
     </a>
-<a
-  href="#contact"
-  className="ml-4 bg-green-500 hover:bg-green-600 px-8 py-4 rounded-lg font-semibold inline-block"
->
-  Need Support?
-</a>
     <a
       href="#about"
       className="ml-4 border border-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-900 transition"
