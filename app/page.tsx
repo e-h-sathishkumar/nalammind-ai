@@ -74,27 +74,23 @@ return ( <main className="min-h-screen bg-white text-gray-800">
     <p className="text-lg text-white/90 mb-8 font-medium">
   Supporting Parents • Students • Educators • Schools
 </p>
+<div className="flex flex-wrap justify-center gap-4 mt-6">
 
-<a
-  href="#contact"
-  className="bg-green-500 hover:bg-green-600 px-8 py-4 rounded-lg font-semibold inline-block"
->
-  Need Support?
-</a>
+  <a
+    href="#contact"
+    className="bg-green-500 hover:bg-green-600 px-8 py-4 rounded-lg font-semibold"
+  >
+    Need Support?
+  </a>
 
-    <a
-      href="#program"
-      className="bg-teal-500 hover:bg-teal-600 px-8 py-4 rounded-lg font-semibold inline-block"
-    >
-      Explore Our Programs
-    </a>
-    <a
-      href="#about"
-      className="ml-4 border border-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-900 transition"
-    >
-      Learn More
-    </a>
+  <a
+    href="#about"
+    className="border border-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-900 transition"
+  >
+    Learn More
+  </a>
 
+</div>
   </div>
 </section>
 
