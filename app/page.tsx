@@ -168,19 +168,86 @@ and mindful strategies to create healthier family relationships.
   </div>
 </section>
   {/* About */}
-  <section id="about" className="scroll-mt-20 py-20 px-6">
-    <div className="max-w-5xl mx-auto">
-      <h2 className="text-4xl font-bold mb-6 text-center">
-        Why NalamMind AI?
-      </h2>
+  <section id="about" className="py-20 bg-white">
+  <div className="max-w-6xl mx-auto px-6">
 
-      <p className="text-lg leading-relaxed text-center">
-        NalamMind AI empowers parents, students, educators, and communities
-through evidence-based emotional wellbeing programs, AI-assisted guidance,
-mindfulness practices, and transformative learning experiences.
+    <h3 className="text-4xl md:text-5xl font-bold text-center text-blue-900 mb-4">
+      NalamMind AI
+    </h3>
+    <div className="max-w-5xl mx-auto text-center mb-16">
+      <p className="text-lg text-gray-700 leading-relaxed mb-6">
+        NalamMind is an educational wellbeing platform committed to
+        empowering parents, students, educators, and schools through
+        meaningful guidance, practical resources, and evidence-informed
+        support.
+      </p>
+      <p className="text-lg text-gray-700 leading-relaxed mb-6">
+        We believe that emotional wellbeing, positive relationships,
+        resilience, and lifelong learning are essential foundations
+        for personal and academic success.
+      </p>
+
+      <p className="text-lg text-gray-700 leading-relaxed">
+        Through assessments, educational resources, professional
+        development initiatives, and supportive learning experiences,
+        we help individuals and institutions grow with confidence,
+        clarity, and purpose.
+      </p>
+
+    </div>
+
+    {/* Mission & Vision */}
+
+    <div className="grid md:grid-cols-2 gap-8 mb-16">
+
+      <div className="bg-blue-50 p-8 rounded-2xl shadow-lg">
+        <div className="text-4xl mb-4">🎯</div>
+
+        <h3 className="text-2xl font-bold text-blue-900 mb-4">
+          Our Mission
+        </h3>
+
+        <p className="text-gray-700 leading-relaxed">
+          To make wellbeing education accessible, practical, and impactful
+          by providing trusted resources, meaningful insights, and
+          supportive pathways for growth.
+        </p>
+      </div>
+
+      <div className="bg-green-50 p-8 rounded-2xl shadow-lg">
+        <div className="text-4xl mb-4">🌍</div>
+
+        <h3 className="text-2xl font-bold text-blue-900 mb-4">
+          Our Vision
+        </h3>
+
+        <p className="text-gray-700 leading-relaxed">
+          To build a future where emotional wellbeing, positive
+          relationships, and lifelong learning are valued as essential
+          foundations for personal, educational, and community development.
+        </p>
+      </div>
+
+    </div>
+
+    {/* What We Believe */}
+
+    <div className="bg-gray-50 p-10 rounded-2xl text-center">
+      <h3 className="text-3xl font-bold text-blue-900 mb-6">
+        What We Believe
+      </h3>
+
+      <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+        At NalamMind, we believe that wellbeing is not an isolated goal—
+        it is an integral part of effective learning, healthy relationships,
+        and sustainable success. By supporting families, empowering students,
+        strengthening educators, and partnering with schools, we strive to
+        create environments where every individual can thrive.
       </p>
     </div>
-  </section>
+
+  </div>
+</section>
 {/* Parenting Assessment */}
 <section className="py-20 px-6 bg-gradient-to-r from-blue-50 to-teal-50">
   <div className="max-w-5xl mx-auto text-center">
