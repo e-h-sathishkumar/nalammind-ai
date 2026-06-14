@@ -53,7 +53,7 @@ return ( <main className="min-h-screen bg-white text-gray-800">
   </video>
 
   {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black/60"></div>
+  <div className="absolute inset-0 bg-black/50"></div>
 
   {/* Content */}
   <div className="relative z-10 max-w-6xl mx-auto px-6 text-center text-white">
@@ -72,8 +72,10 @@ return ( <main className="min-h-screen bg-white text-gray-800">
     </p>
 
     <p className="text-lg text-white/90 mb-8 font-medium">
-  Supporting Parents • Students • Educators • Schools
+  Supporting Parents • Students • Educators • Schools<br/>
+  🆓 Take our 5-Minute Parenting Wellness Check and discover your parenting strengths.
 </p>
+
 <div className="flex flex-wrap justify-center gap-4 mt-6">
 
   <a
@@ -82,7 +84,12 @@ return ( <main className="min-h-screen bg-white text-gray-800">
   >
     Need Support?
   </a>
-
+<a
+  href="/parenting-check"
+  className="bg-teal-500 hover:bg-teal-600 px-8 py-4 rounded-lg font-semibold text-white"
+>
+  Parenting Check
+</a>
   <a
     href="#about"
     className="border border-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-900 transition"
@@ -174,7 +181,38 @@ mindfulness practices, and transformative learning experiences.
       </p>
     </div>
   </section>
+{/* Parenting Assessment */}
+<section className="py-20 px-6 bg-gradient-to-r from-blue-50 to-teal-50">
+  <div className="max-w-5xl mx-auto text-center">
 
+    <h2 className="text-4xl font-bold text-blue-900 mb-4">
+      Free Parenting Wellness Check™
+    </h2>
+
+    <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
+      Discover your parenting strengths and receive personalized guidance in just 5 minutes.
+    </p>
+
+    <div className="bg-white p-8 rounded-2xl shadow-xl max-w-3xl mx-auto">
+      <div className="text-6xl mb-4">👨‍👩‍👧‍👦</div>
+
+      <h3 className="text-2xl font-bold text-blue-900 mb-4">
+        10 Questions • Instant Results • Personalized Parenting Tips
+
+      </h3>
+      <a
+        href="/parenting-check"
+        className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg font-semibold inline-block"
+      >
+        Start Free Assessment
+      </a>
+      <p className="mt-4 text-xs text-gray-500">
+  No Registration Required
+</p>
+    </div>
+
+  </div>
+</section>
   {/* Program */}
   {/* Parent Wellbeing Framework */}
 <section className="bg-gray-100 py-20 px-6">
@@ -259,30 +297,72 @@ mindfulness practices, and transformative learning experiences.
   </div>
 </section>
   {/* Services */}
-  <section id="service" className="scroll-mt-20 py-20 px-6">
-    <div className="max-w-5xl mx-auto">
-      <h2 className="text-4xl font-bold mb-8 text-center">
-        Who We Serve
-      </h2>
+  <section id="who-we-serve" className="py-20 bg-gray-50">
+  <div className="max-w-5xl mx-auto text-center">
 
-      <div className="grid md:grid-cols-3 gap-6">
-        <div className="border p-6 rounded-lg">
-          <h3 className="font-bold text-xl mb-3">Parents</h3>
-          <p>Emotional resilience and family wellbeing.</p>
-        </div>
+    <h2 className="text-4xl md:text-5xl font-bold text-center text-blue-900 mb-4">
+      Who We Serve
+    </h2>
 
-        <div className="border p-6 rounded-lg">
-          <h3 className="font-bold text-xl mb-3">Students</h3>
-          <p>Confidence, mindset and emotional growth.</p>
-        </div>
+    <p className="text-center text-gray-600 text-lg max-w-3xl mx-auto mb-12">
+      Supporting every stakeholder in the journey of learning,
+      wellbeing, and growth.
+    </p>
 
-        <div className="border p-6 rounded-lg">
-          <h3 className="font-bold text-xl mb-3">Schools</h3>
-          <p>Teacher support and wellbeing initiatives.</p>
-        </div>
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      {/* Parents */}
+      <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div className="text-5xl mb-4">👨‍👩‍👧‍👦</div>
+        <h3 className="text-2xl font-bold text-blue-900 mb-3">
+          Parents
+        </h3>
+        <p className="text-gray-600">
+          Guidance for emotional wellbeing, positive parenting,
+          and stronger family relationships.
+        </p>
       </div>
+
+      {/* Students */}
+      <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div className="text-5xl mb-4">🎓</div>
+        <h3 className="text-2xl font-bold text-blue-900 mb-3">
+          Students
+        </h3>
+        <p className="text-gray-600">
+          Support for emotional resilience, confidence,
+          mindset, and life skills development.
+        </p>
+      </div>
+
+      {/* Educators */}
+      <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div className="text-5xl mb-4">👩‍🏫</div>
+        <h3 className="text-2xl font-bold text-blue-900 mb-3">
+          Educators
+        </h3>
+        <p className="text-gray-600">
+          Resources and strategies to promote student wellbeing,
+          engagement, and classroom connection.
+        </p>
+      </div>
+
+      {/* Schools */}
+      <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div className="text-5xl mb-4">🏫</div>
+        <h3 className="text-2xl font-bold text-blue-900 mb-3">
+          Schools
+        </h3>
+        <p className="text-gray-600">
+          Wellbeing programs, capacity building, and AI-powered
+          support for holistic school development.
+        </p>
+      </div>
+
     </div>
-  </section>
+
+  </div>
+</section>
 
 {/* Contact */}
 <section id="contact" className="scroll-mt-20 py-20 px-6 bg-gray-50">
