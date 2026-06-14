@@ -430,7 +430,59 @@ and mindful strategies to create healthier family relationships.
 
   </div>
 </section>
+<section className="py-20 bg-white">
+  <div className="max-w-6xl mx-auto px-6">
 
+    <h2 className="text-4xl font-bold text-center text-blue-900 mb-6">
+      How We Use AI
+    </h2>
+
+    <p className="text-center text-gray-600 max-w-4xl mx-auto mb-12 text-lg">
+      At NalamMind, AI is used as a supportive tool to enhance access to
+      information, guidance, and wellbeing resources—not as a replacement
+      for human connection, professional judgment, or personalized support.
+    </p>
+
+    <div className="grid md:grid-cols-3 gap-8">
+
+      <div className="bg-blue-50 p-8 rounded-2xl shadow-lg">
+        <div className="text-4xl mb-4">🧠</div>
+        <h3 className="text-xl font-bold text-blue-900 mb-3">
+          Personalized Insights
+        </h3>
+        <p className="text-gray-700">
+          AI helps generate meaningful insights from wellbeing assessments
+          and self-reflection tools.
+        </p>
+      </div>
+
+      <div className="bg-green-50 p-8 rounded-2xl shadow-lg">
+        <div className="text-4xl mb-4">📚</div>
+        <h3 className="text-xl font-bold text-blue-900 mb-3">
+          Resource Discovery
+        </h3>
+        <p className="text-gray-700">
+          AI assists users in finding relevant wellbeing resources,
+          learning materials, and guidance more efficiently.
+        </p>
+      </div>
+
+      <div className="bg-purple-50 p-8 rounded-2xl shadow-lg">
+        <div className="text-4xl mb-4">🤝</div>
+        <h3 className="text-xl font-bold text-blue-900 mb-3">
+          Human-Centred Support
+        </h3>
+        <p className="text-gray-700">
+          Professional guidance, empathy, and decision-making remain
+          human-led. AI serves as a supporting technology, not a substitute
+          for personal support.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 {/* Contact */}
 <section id="contact" className="scroll-mt-20 py-20 px-6 bg-gray-50">
   <div className="max-w-6xl mx-auto">
