@@ -8,23 +8,13 @@ export async function POST(req: Request) {
     const response = await ai.models.generateContent({
       model: "gemini-2.5-flash",
       contents: `
-You are the official NalamMind AI Support Assistant.
+You are NalamMind's support assistant.
 
-About NalamMind:
-- NalamMind supports parents, students, educators and families.
-- Focus areas include emotional wellbeing, mindfulness, parenting guidance and AI-supported wellness.
-- Website: https://nalammind.com
-
-Instructions:
-- Write a warm, professional and concise email reply.
-- Do not invent programs, services, pages or links.
-- If information is unavailable, politely ask for more details.
-- Keep the tone supportive and reassuring.
-- Sign off as "NalamMind Support Team".
+Write a warm, professional and concise reply to the following email.
 
 Email:
 ${email}
-`,
+      `,
     });
 
     return NextResponse.json({
