@@ -1,5 +1,51 @@
+
+ "use client";
+
+import { useState } from "react";
+
 export default function Home() {
-return ( <main className="min-h-screen bg-white text-gray-800">
+
+const [form, setForm] = useState({
+  name: "",
+  email: "",
+  phone: "",
+  message: "",
+});
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  const res = await fetch("/api/ai-send", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      to: form.email,
+      name: form.name,
+      phone: form.phone,
+      message: form.message,
+    }),
+  });
+
+  const data = await res.json();
+
+  if (data.success) {
+    alert("Thank you! AI response sent to your email.");
+
+    setForm({
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+  } else {
+    alert("Failed to send response: " + data.error);
+  }
+};
+
+return (
+  <main className="min-h-screen bg-white text-gray-800">
 {/* Navigation */} 
 <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm"> 
 <div className="max-w-6xl mx-auto px-6 py-2 flex justify-between items-center"> 
@@ -528,61 +574,59 @@ and mindful strategies to create healthier family relationships.
       </div>
 {/* Contact Form */}
 <form
-  action="https://formsubmit.co/nalam.mind@gmail.com"
-  method="POST"
+  onSubmit={handleSubmit}
   className="bg-white p-8 rounded-xl shadow-lg"
 >
   {/* Email Subject */}
-  <input
-    type="hidden"
-    name="_subject"
-    value="New Enquiry from NalamMind AI Website"
-  />
+  
 
   {/* Redirect After Submission */}
-  <input
-    type="hidden"
-    name="_next"
-    value="https://www.nalammind.com/thank-you.html"
-  />
+ 
 
   {/* Disable Captcha (Optional) */}
-  <input
-    type="hidden"
-    name="_captcha"
-    value="false"
-  />
+ 
 
   <input
-    type="text"
-    name="name"
-    placeholder="Your Name"
-    required
-    className="w-full border border-gray-300 p-3 rounded-lg mb-4"
-  />
+  type="text"
+  value={form.name}
+  onChange={(e) =>
+    setForm({ ...form, name: e.target.value })
+  }
+  placeholder="Your Name"
+  required
+  className="w-full border border-gray-300 p-3 rounded-lg mb-4"
+/>
+<input
+  type="email"
+  value={form.email}
+  onChange={(e) =>
+    setForm({ ...form, email: e.target.value })
+  }
+  placeholder="Your Email"
+  required
+  className="w-full border border-gray-300 p-3 rounded-lg mb-4"
+/>
 
   <input
-    type="email"
-    name="email"
-    placeholder="Your Email"
-    required
-    className="w-full border border-gray-300 p-3 rounded-lg mb-4"
-  />
-
-  <input
-    type="tel"
-    name="phone"
-    placeholder="Phone Number"
-    className="w-full border border-gray-300 p-3 rounded-lg mb-4"
-  />
+  type="tel"
+  value={form.phone}
+  onChange={(e) =>
+    setForm({ ...form, phone: e.target.value })
+  }
+  placeholder="Phone Number"
+  className="w-full border border-gray-300 p-3 rounded-lg mb-4"
+/>
 
   <textarea
-    name="message"
-    placeholder="Please describe your question or concern..."
-    rows={5}
-    required
-    className="w-full border border-gray-300 p-3 rounded-lg mb-4"
-  />
+  value={form.message}
+  onChange={(e) =>
+    setForm({ ...form, message: e.target.value })
+  }
+  placeholder="Please describe your question or concern..."
+  rows={5}
+  required
+  className="w-full border border-gray-300 p-3 rounded-lg mb-4"
+/>
 
   <button
     type="submit"

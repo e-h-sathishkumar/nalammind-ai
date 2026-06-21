@@ -33,7 +33,7 @@ ${email}
 
     return NextResponse.json({
       success: true,
-      reply: response.text,
+      reply: response.text(),
     });
   } 
   catch (error: any) {
