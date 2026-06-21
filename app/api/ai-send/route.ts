@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { ai } from "@/lib/gemini";
 import { sendMail } from "@/lib/gmail";
+import { saveEnquiry } from "@/lib/google-sheet";
 
 export async function POST(req: Request) {
 try {
@@ -62,6 +63,19 @@ await sendMail(
   "Thank You for Contacting NalamMind",
   reply
 );
+try {
+  await saveEnquiry({
+    name,
+    email: to,
+    phone,
+    message,
+    aiReply: reply,
+  });
+
+  console.log("✅ Google Sheet saved");
+} catch (error) {
+  console.error("❌ GOOGLE SHEET ERROR:", error);
+};
 
 // Send a copy to NalamMind
 await sendMail(
