@@ -41,13 +41,39 @@ export const metadata: Metadata = {
 
   authors: [{ name: "NalamMind AI" }],
 
+  metadataBase: new URL("https://www.nalammind.com"),
+
   openGraph: {
     title:
       "NalamMind AI | Parent Guidance, Student Wellbeing & School Support",
+
     description:
       "Supporting parents, students, educators, and schools through emotional wellbeing, parenting guidance, mindfulness, and AI-assisted support.",
+
     siteName: "NalamMind AI",
+
     type: "website",
+
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "NalamMind AI",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "NalamMind AI | Parent Guidance, Student Wellbeing & School Support",
+
+    description:
+      "Empowering parents, students, educators, and schools through AI and emotional wellbeing.",
+
+    images: ["/og-image.png"],
   },
 };
 
