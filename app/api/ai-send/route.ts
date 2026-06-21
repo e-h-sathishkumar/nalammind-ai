@@ -54,7 +54,7 @@ ${message}
 `,
 });
 
-const reply = response.text;
+const reply = String(response.text || "");
 
 // Send AI-generated reply to the user
 await sendMail(
