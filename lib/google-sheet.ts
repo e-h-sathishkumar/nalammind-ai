@@ -51,7 +51,7 @@ export async function getEnquiries() {
   });
 
   const rows = response.data.values || [];
-
+console.log("Rows found:", rows.length);
   return rows.slice(1).map((row) => ({
     date: row[0] || "",
     name: row[1] || "",
