@@ -481,17 +481,34 @@ if (data.success) {
       {/* Single Clean Contact Form Column */}
       {/* Single Clean Contact Form Column */}
 <div>
-  {success && (
-    <div className="bg-green-100 border border-green-300 text-green-800 p-4 rounded-lg mb-4">
-      ✅ Thank you! Your enquiry has been submitted successfully.
-      Our team will contact you shortly.
-    </div>
-  )}
+  {success ? (
+    <div className="bg-green-50 border border-green-200 p-8 rounded-xl shadow-lg text-center">
+      <h3 className="text-2xl font-bold text-green-700 mb-4">
+        ✅ Thank You!
+      </h3>
 
-  <form
-    onSubmit={handleSubmit}
-    className="bg-white p-8 rounded-xl shadow-lg"
-  >
+      <p className="text-gray-700 mb-4">
+        Your enquiry has been submitted successfully.
+      </p>
+
+      <p className="text-gray-600">
+        📧 Check your email for an AI-generated response.
+        <br />
+        📱 If required, our team will contact you personally.
+      </p>
+
+      <button
+        onClick={() => setSuccess(false)}
+        className="mt-6 bg-blue-900 text-white px-6 py-3 rounded-lg"
+      >
+        Ask Another Question
+      </button>
+    </div>
+  ) : (
+    <form
+      onSubmit={handleSubmit}
+      className="bg-white p-8 rounded-xl shadow-lg"
+    >
 
         {/* Honeypot Anti-Spam Field */}
         <input
@@ -551,7 +568,7 @@ if (data.success) {
   disabled={loading}
   className="w-full bg-blue-900 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 disabled:opacity-50"
 >
-  {loading ? "Sending..." : "Ask Our Experts"}
+ {loading ? "Generating AI Response..." : "Ask Our Experts"}
 </button>
 
         {/* Privacy Note */}
@@ -559,6 +576,7 @@ if (data.success) {
           🔒 Your information will remain confidential and will be used only to respond to your enquiry.
         </p>
       </form>
+  )}
       </div>
     </div>
   </div>
