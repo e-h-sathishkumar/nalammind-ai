@@ -13,50 +13,66 @@ export default function NalamMindSection() {
 const [success, setSuccess] = useState(false);
 const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSuccess(false);
+const handleSubmit = async (e: React.FormEvent) => {
+e.preventDefault();
+setSuccess(false);
 setLoading(true);
 
-    // Name Validation
-    if (form.name.trim().length < 3) {
-      alert("Please enter a valid name");
-      return;
-    }
+// Honeypot Bot Check
+if (form.website.trim() !== "") {
+console.log("Bot detected");
+setLoading(false);
+return;
+}
 
-    // Email Validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(form.email)) {
-      alert("Please enter a valid email address");
-      return;
-    }
+// Name Validation
+if (form.name.trim().length < 3) {
+setLoading(false);
+alert("Please enter a valid name");
+return;
+}
 
-    // Phone Validation
-    if (!/^[0-9]{10}$/.test(form.phone)) {
-      alert("Please enter a valid 10-digit phone number");
-      return;
-    }
+// Email Validation
+const emailRegex = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
 
-    // Message Validation
-    if (form.message.trim().length < 10) {
-      alert("Please enter a detailed message");
-      return;
-    }
+if (!emailRegex.test(form.email)) {
+setLoading(false);
+alert("Please enter a valid email address");
+return;
+}
+
+// Phone Validation
+if (!/^[0-9]{10}$/.test(form.phone)) {
+setLoading(false);
+alert("Please enter a valid 10-digit phone number");
+return;
+}
+
+// Message Validation
+if (form.message.trim().length < 10) {
+setLoading(false);
+alert("Please enter a detailed message");
+return;
+}
+
+try {
 const res = await fetch("/api/ai-send", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    to: form.email,
-    name: form.name,
-    phone: form.phone,
-    message: form.message,
-  }),
+method: "POST",
+headers: {
+"Content-Type": "application/json",
+},
+body: JSON.stringify({
+to: form.email,
+name: form.name,
+phone: form.phone,
+message: form.message,
+website: form.website,
+}),
 });
 
+
 const data = await res.json();
-setLoading(false);
+
 if (data.success) {
   setSuccess(true);
 
@@ -70,11 +86,21 @@ if (data.success) {
 
   setTimeout(() => {
     setSuccess(false);
-  }, 5000);
-}else {
-  alert("Failed to send response: " + data.error);
-}  
-  };
+  }, 10000); // Success message visible for 10 seconds
+} else {
+  console.error("AI Error:", data.error);
+  alert("Unable to process your request. Please try again.");
+}
+
+
+} catch (error) {
+console.error("Submission Error:", error);
+alert("Something went wrong. Please try again later.");
+} finally {
+setLoading(false);
+}
+};
+
 
   return (
     <main>
