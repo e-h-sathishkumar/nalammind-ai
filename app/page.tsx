@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 
@@ -111,6 +111,14 @@ setLoading(false);
         <a href="#testimonials" className="hover:text-blue-700">Testimonials</a>
         <a href="#service" className="hover:text-blue-700">Who We Serve</a>
         <a href="#contact" className="hover:text-blue-700">Contact</a>
+<a
+  href="https://nalammind-question-ai.vercel.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-full bg-indigo-600 px-4 py-2 font-semibold text-white shadow-sm transition hover:bg-indigo-700"
+>
+  LEAP Exam Engine →
+</a>
       </div>
     
       {/* Hero */}
@@ -121,7 +129,8 @@ setLoading(false);
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover -z-20"
+          className="absolute inset-0 w-full
+           h-full object-cover -z-20"
         >
           <source src="/videos/nalam-mind-video.mp4" type="video/mp4" />
         </video>
@@ -140,8 +149,8 @@ setLoading(false);
             wellbeing, and life skills through guided programs and AI-powered support.
           </p>
           <p className="text-lg text-white/90 mb-8 font-medium">
-            Supporting Parents • Students • Educators • Schools<br/>
-            🆓 Take our 5-Minute Parenting Wellness Check and discover your parenting strengths.
+            Supporting Parents â€¢ Students â€¢ Educators â€¢ Schools<br/>
+            ðŸ†“ Take our 5-Minute Parenting Wellness Check and discover your parenting strengths.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-6">
             <a href="#contact" className="bg-green-500 hover:bg-green-600 px-8 py-4 rounded-lg font-semibold">
@@ -158,7 +167,7 @@ setLoading(false);
 
         {/* Bouncing Arrow */}
         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white text-2xl animate-bounce z-10">
-          ↓
+          â†“
         </div>
       </section>
 
@@ -172,25 +181,25 @@ setLoading(false);
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Card 1 */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition h-full text-left border border-gray-100">
-              <div className="text-4xl mb-4">👨‍👩‍👧</div>
+              <div className="text-4xl mb-4">ðŸ‘¨â€ðŸ‘©â€ðŸ‘§</div>
               <h3 className="text-xl font-bold text-blue-900 mb-3">Parent Wellbeing Program</h3>
               <p className="text-gray-600">Empowering parents with practical tools, emotional resilience, and mindful strategies to create healthier family relationships.</p>  
             </div>
             {/* Card 2 */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition h-full text-left border border-gray-100">
-              <div className="text-4xl mb-4">🎓</div>
+              <div className="text-4xl mb-4">ðŸŽ“</div>
               <h3 className="text-xl font-bold text-blue-900 mb-3">Student Wellbeing Program</h3>
               <p className="text-gray-600">Develop confidence, emotional intelligence, resilience, focus, and positive habits for academic and personal growth.</p>
             </div>
             {/* Card 3 */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition h-full text-left border border-gray-100">
-              <div className="text-4xl mb-4">👩‍🏫</div>
+              <div className="text-4xl mb-4">ðŸ‘©â€ðŸ«</div>
               <h3 className="text-xl font-bold text-blue-900 mb-3">Teacher Wellness Program</h3>
               <p className="text-gray-600">Support educators through stress management, emotional wellbeing practices, and professional growth strategies.</p>
             </div>
             {/* Card 4 */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition h-full text-left border border-gray-100">
-              <div className="text-4xl mb-4">🏫</div>
+              <div className="text-4xl mb-4">ðŸ«</div>
               <h3 className="text-xl font-bold text-blue-900 mb-3">School Wellness Framework</h3>
               <p className="text-gray-600">A comprehensive wellbeing ecosystem for schools, integrating students, parents, teachers, and leadership teams.</p>
             </div>
@@ -218,7 +227,7 @@ setLoading(false);
         {/* Mission & Vision */}
     <div className="grid md:grid-cols-2 gap-8 mb-16">
       <div className="bg-blue-50 p-8 rounded-2xl shadow-lg">
-        <div className="text-4xl mb-4">🎯</div>
+        <div className="text-4xl mb-4">ðŸŽ¯</div>
         <h3 className="text-2xl font-bold text-blue-900 mb-4">
           Our Mission
         </h3>
@@ -230,7 +239,7 @@ setLoading(false);
       </div>
 
       <div className="bg-green-50 p-8 rounded-2xl shadow-lg">
-        <div className="text-4xl mb-4">🌍</div>
+        <div className="text-4xl mb-4">ðŸŒ</div>
         <h3 className="text-2xl font-bold text-blue-900 mb-4">
           Our Vision
         </h3>
@@ -248,7 +257,7 @@ setLoading(false);
         What We Believe
       </h3>
       <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
-        At NalamMind, we believe that wellbeing is not an isolated goal—
+        At NalamMind, we believe that wellbeing is not an isolated goalâ€”
         it is an integral part of effective learning, healthy relationships,
         and sustainable success. By supporting families, empowering students,
         strengthening educators, and partnering with schools, we strive to
@@ -260,15 +269,15 @@ setLoading(false);
     <section className="py-20 px-6 bg-gradient-to-r from-blue-50 to-teal-50">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-blue-900 mb-4">
-          Free Parenting Wellness Check™
+          Free Parenting Wellness Checkâ„¢
         </h2>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
           Discover your parenting strengths and receive personalized guidance in just 5 minutes.
         </p>
         <div className="bg-white p-8 rounded-2xl shadow-xl max-w-3xl mx-auto">
-          <div className="text-6xl mb-4">👨‍👩‍👧‍👦</div>
+          <div className="text-6xl mb-4">ðŸ‘¨â€ðŸ‘©â€ðŸ‘§â€ðŸ‘¦</div>
           <h3 className="text-2xl font-bold text-blue-900 mb-4">
-            10 Questions • Instant Results • Personalized Parenting Tips
+            10 Questions â€¢ Instant Results â€¢ Personalized Parenting Tips
           </h3>
           <a
             href="/parenting-check"
@@ -334,7 +343,7 @@ setLoading(false);
           "The Parent Emotional Reset helped me understand my child better and improve communication at home."
         </p>
         <h4 className="font-bold text-blue-900">
-          — Parent Participant
+          â€” Parent Participant
         </h4>
       </div>
 
@@ -344,7 +353,7 @@ setLoading(false);
           "Our students became more confident and emotionally aware after participating in the wellbeing sessions."
         </p>
         <h4 className="font-bold text-blue-900">
-          — School Counselor
+          â€” School Counselor
         </h4>
       </div>
 
@@ -354,7 +363,7 @@ setLoading(false);
           "Practical, engaging and highly relevant for teachers and school leaders."
         </p>
         <h4 className="font-bold text-blue-900">
-          — School Principal
+          â€” School Principal
         </h4>
       </div>
     </div>
@@ -375,7 +384,7 @@ setLoading(false);
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
       {/* Parents */}
       <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left">
-        <div className="text-5xl mb-4">👨‍👩‍👧‍👦</div>
+        <div className="text-5xl mb-4">ðŸ‘¨â€ðŸ‘©â€ðŸ‘§â€ðŸ‘¦</div>
         <h3 className="text-2xl font-bold text-blue-900 mb-3">
           Parents
         </h3>
@@ -386,7 +395,7 @@ setLoading(false);
 
       {/* Students */}
       <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left">
-        <div className="text-5xl mb-4">🎓</div>
+        <div className="text-5xl mb-4">ðŸŽ“</div>
         <h3 className="text-2xl font-bold text-blue-900 mb-3">
           Students
         </h3>
@@ -397,7 +406,7 @@ setLoading(false);
 
       {/* Educators */}
       <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left">
-        <div className="text-5xl mb-4">👩‍🏫</div>
+        <div className="text-5xl mb-4">ðŸ‘©â€ðŸ«</div>
         <h3 className="text-2xl font-bold text-blue-900 mb-3">
           Educators
         </h3>
@@ -408,7 +417,7 @@ setLoading(false);
 
       {/* Schools */}
       <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left">
-        <div className="text-5xl mb-4">🏫</div>
+        <div className="text-5xl mb-4">ðŸ«</div>
         <h3 className="text-2xl font-bold text-blue-900 mb-3">
           Schools
         </h3>
@@ -428,13 +437,13 @@ setLoading(false);
 
     <p className="text-center text-gray-600 max-w-4xl mx-auto mb-12 text-lg">
       At NalamMind, AI is used as a supportive tool to enhance access to
-      information, guidance, and wellbeing resources—not as a replacement
+      information, guidance, and wellbeing resourcesâ€”not as a replacement
       for human connection, professional judgment, or personalized support.
     </p>
 
     <div className="grid md:grid-cols-3 gap-8">
       <div className="bg-blue-50 p-8 rounded-2xl shadow-lg">
-        <div className="text-4xl mb-4">🧠</div>
+        <div className="text-4xl mb-4">ðŸ§ </div>
         <h3 className="text-xl font-bold text-blue-900 mb-3">
           Personalized Insights
         </h3>
@@ -445,7 +454,7 @@ setLoading(false);
       </div>
 
       <div className="bg-green-50 p-8 rounded-2xl shadow-lg">
-        <div className="text-4xl mb-4">📚</div>
+        <div className="text-4xl mb-4">ðŸ“š</div>
         <h3 className="text-xl font-bold text-blue-900 mb-3">
           Resource Discovery
         </h3>
@@ -456,7 +465,7 @@ setLoading(false);
       </div>
 
       <div className="bg-purple-50 p-8 rounded-2xl shadow-lg">
-        <div className="text-4xl mb-4">🤝</div>
+        <div className="text-4xl mb-4">ðŸ¤</div>
         <h3 className="text-xl font-bold text-blue-900 mb-3">
           Human-Centred Support
         </h3>
@@ -480,7 +489,7 @@ setLoading(false);
     {/* Guidance Box */}
     <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg mb-12 max-w-4xl mx-auto">
       <h3 className="text-2xl font-bold text-blue-900 text-center mb-3">
-        💬 Need Someone to Listen to You?
+        ðŸ’¬ Need Someone to Listen to You?
       </h3>
 
       <p className="text-gray-700 text-center">
@@ -499,9 +508,9 @@ setLoading(false);
         <h3 className="text-2xl font-bold text-blue-900 mb-6">
           Get In Touch
         </h3>
-        <p className="text-lg mb-4">📧 nalam.mind@gmail.com</p>
-        <p className="text-lg mb-4">📱 +91 9361565208</p>
-        <p className="text-lg">📍 Coimbatore, Tamil Nadu, India</p>
+        <p className="text-lg mb-4">ðŸ“§ nalam.mind@gmail.com</p>
+        <p className="text-lg mb-4">ðŸ“± +91 9361565208</p>
+        <p className="text-lg">ðŸ“ Coimbatore, Tamil Nadu, India</p>
       </div>
 
       {/* Single Clean Contact Form Column */}
@@ -510,7 +519,7 @@ setLoading(false);
   {success ? (
     <div className="bg-green-50 border border-green-200 p-8 rounded-xl shadow-lg text-center">
       <h3 className="text-2xl font-bold text-green-700 mb-4">
-        ✅ Thank You!
+        âœ… Thank You!
       </h3>
 
       <p className="text-gray-700 mb-4">
@@ -518,9 +527,9 @@ setLoading(false);
       </p>
 
       <p className="text-gray-600">
-        📧 Check your email for an AI-generated response.
+        ðŸ“§ Check your email for an AI-generated response.
         <br />
-        📱 If required, our team will contact you personally.
+        ðŸ“± If required, our team will contact you personally.
       </p>
 
       <button
@@ -599,7 +608,7 @@ setLoading(false);
 
         {/* Privacy Note */}
         <p className="text-sm text-gray-500 text-center mt-4">
-          🔒 Your information will remain confidential and will be used only to respond to your enquiry.
+          ðŸ”’ Your information will remain confidential and will be used only to respond to your enquiry.
         </p>
       </form>
   )}
@@ -633,7 +642,7 @@ setLoading(false);
 {/* Footer */}
 <footer className="bg-blue-950 text-white text-center py-8">
   <p className="font-semibold">
-    © 2026 NalamMind AI. All Rights Reserved.
+    Â© 2026 NalamMind AI. All Rights Reserved.
   </p>
 
   <p className="text-gray-300 mt-2">
@@ -648,7 +657,7 @@ setLoading(false);
   rel="noopener noreferrer"
   className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white px-6 py-4 rounded-full shadow-2xl font-semibold z-50 transition-all duration-300 hover:scale-110"
 >
-  💬 WhatsApp
+  ðŸ’¬ WhatsApp
 </a>
 
 </main>
