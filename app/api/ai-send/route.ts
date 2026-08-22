@@ -4,26 +4,26 @@ import { sendMail } from "@/lib/gmail";
 import { saveEnquiry } from "@/lib/google-sheet";
 
 export async function POST(req: Request) {
-try {
-const { to, name, phone, message } = await req.json();
+  try {
+    const { to, name, phone, message } = await req.json();
 
+    let reply = `Dear ${name},\n\nThank you for reaching out to NalamMind AI. We have received your message regarding your wellbeing query and our team will get back to you shortly.\n\nWarm regards,\nNalamMind Support Team`;
 
-const response = await ai.models.generateContent({
-  model: "gemini-2.5-flash-lite",
-  contents: `
-
-You are the official NalamMind AI Support Assistant.
+    // 1. Isolate the Gemini Call to check for specific AI errors
+    try {
+      console.log("🤖 Attempting to call Gemini API...");
+      
+      const response = await ai.models.generateContent({
+        // Note: If 'gemini-2.5-flash-lite' throws an error, try changing it to 'gemini-2.5-flash' or 'gemini-1.5-flash'
+        model: "gemini-2.5-flash", 
+        contents: `You are the official NalamMind AI Support Assistant.
 
 About NalamMind:
-
 * Supports parents, students and educators.
 * Focuses on emotional wellbeing, mindfulness, parenting guidance and AI-supported wellness.
 * Website: https://nalammind.com
 
 Instructions:
-
-Instructions:
-
 - Read the customer's message carefully.
 - Understand the actual concern.
 - Respond as a caring mentor, wellbeing coach, or educator.
@@ -37,80 +37,75 @@ Instructions:
 - Tailor the response specifically to the customer's situation.
 
 Start with:
-
 Dear ${name},
-  
-End with:
 
+End with:
 Warm regards,
 NalamMind Support Team
+
 Customer Details:
-
 Name: ${name}
-
 Phone: ${phone}
-
 Message:
-${message}
-`,
-});
+${message}`,
+      });
 
-const reply = String(response.text || "");
+      if (response.text) {
+        reply = String(response.text);
+        console.log("✅ Gemini response generated successfully!");
+      }
+    } catch (geminiError: any) {
+      console.error("❌ GEMINI API ERROR:", geminiError.message || geminiError);
+      // We catch it here so the form still submits even if Gemini fails temporarily
+    }
 
-// Send AI-generated reply to the user
-await sendMail(
-  to,
-  "Thank You for Contacting NalamMind",
-  reply
-);
-try {
-  await saveEnquiry({
-    name,
-    email: to,
-    phone,
-    message,
-    aiReply: reply,
-  });
+    // 2. Send AI-generated reply to the user
+    try {
+      await sendMail(to, "Thank You for Contacting NalamMind", reply);
+      console.log("✅ User email sent");
+    } catch (mailError) {
+      console.error("❌ GMAIL USER ERROR:", mailError);
+    }
 
-  console.log("✅ Google Sheet saved");
-} catch (error) {
-  console.error("❌ GOOGLE SHEET ERROR:", error);
-};
+    // 3. Save inquiry to Google Sheet
+    try {
+      await saveEnquiry({
+        name,
+        email: to,
+        phone,
+        message,
+        aiReply: reply,
+      });
+      console.log("✅ Google Sheet saved");
+    } catch (sheetError) {
+      console.error("❌ GOOGLE SHEET ERROR:", sheetError);
+    }
 
-// Send a copy to NalamMind
-await sendMail(
-  "nalam.mind@gmail.com",
-  "New Website Inquiry",
-  `
-New enquiry received from the website.
+    // 4. Send a copy to NalamMind admin
+    try {
+      await sendMail(
+        "nalam.mind@gmail.com",
+        "New Website Inquiry",
+        `New enquiry received from the website.\n\nName: ${name}\nEmail: ${to}\nPhone: ${phone}\n\nMessage:\n${message}`
+      );
+      console.log("✅ Admin email sent");
+    } catch (adminMailError) {
+      console.error("❌ GMAIL ADMIN ERROR:", adminMailError);
+    }
 
-Name: ${name}
-Email: ${to}
-Phone: ${phone}
+    return NextResponse.json({
+      success: true,
+      message: "Request processed successfully",
+    });
 
-Message:
-${message}
-`
-);
-
-return NextResponse.json({
-  success: true,
-  message: "Email sent successfully",
-});
-
-
-} catch (error: any) {
-console.error("AI Send Error:", error);
-
-
-return NextResponse.json(
-  {
-    success: false,
-    error: error.message,
-  },
-  { status: 500 }
-);
-
-
-}
+  } catch (error: any) {
+    console.error("❌ CRITICAL SERVER ERROR:", error);
+    return NextResponse.json(
+      {
+        success: false,
+        error: error.message || "Internal Server Error",
+      },
+      { status: 500 }
+    );
+  }
 }
