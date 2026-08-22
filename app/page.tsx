@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 
@@ -117,7 +117,7 @@ setLoading(false);
   rel="noopener noreferrer"
   className="rounded-full bg-indigo-600 px-4 py-2 font-semibold text-white shadow-sm transition hover:bg-indigo-700"
 >
-  LEAP Exam Engine →
+  LEAP Exam Engine ?
 </a>
       </div>
     
@@ -181,25 +181,25 @@ setLoading(false);
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Card 1 */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition h-full text-left border border-gray-100">
-              <div className="text-4xl mb-4">ðŸ‘¨â€ðŸ‘©â€ðŸ‘§</div>
+              <div className="text-4xl mb-4">👨‍👩‍👧</div>
               <h3 className="text-xl font-bold text-blue-900 mb-3">Parent Wellbeing Program</h3>
               <p className="text-gray-600">Empowering parents with practical tools, emotional resilience, and mindful strategies to create healthier family relationships.</p>  
             </div>
             {/* Card 2 */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition h-full text-left border border-gray-100">
-              <div className="text-4xl mb-4">ðŸŽ“</div>
+              <div className="text-4xl mb-4">🎓</div>
               <h3 className="text-xl font-bold text-blue-900 mb-3">Student Wellbeing Program</h3>
               <p className="text-gray-600">Develop confidence, emotional intelligence, resilience, focus, and positive habits for academic and personal growth.</p>
             </div>
             {/* Card 3 */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition h-full text-left border border-gray-100">
-              <div className="text-4xl mb-4">ðŸ‘©â€ðŸ«</div>
+              <div className="text-4xl mb-4">👩‍💼</div>
               <h3 className="text-xl font-bold text-blue-900 mb-3">Teacher Wellness Program</h3>
               <p className="text-gray-600">Support educators through stress management, emotional wellbeing practices, and professional growth strategies.</p>
             </div>
             {/* Card 4 */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition h-full text-left border border-gray-100">
-              <div className="text-4xl mb-4">ðŸ«</div>
+              <div className="text-4xl mb-4">🏫</div>
               <h3 className="text-xl font-bold text-blue-900 mb-3">School Wellness Framework</h3>
               <p className="text-gray-600">A comprehensive wellbeing ecosystem for schools, integrating students, parents, teachers, and leadership teams.</p>
             </div>
